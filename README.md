@@ -306,6 +306,7 @@ sns.set_theme(font='Malgun Gothic', rc={'axes.unicode_minus': False})
     - 하이퍼파라미터를 편리하게 관리해주는 도구
 
 ### 딥러닝, 인공신경망
+- 인공신경망 : ANN(Artificial Neural Network)
 - 딥러닝 : 인간의 뇌를 모방하여 훈련시키는 머신러닝 기법
     - 이미지, 영상, 음성, 텍스트 처리에 뛰어난 성능 발휘
 
@@ -315,6 +316,7 @@ sns.set_theme(font='Malgun Gothic', rc={'axes.unicode_minus': False})
 - [노트북](./day04/mldl01_딥러닝_인공신경망.ipynb)
 
 ### 심층신경망
+- 심층신경망 : DNN(Deep Neural Network)
 - 2개 이상의 밀집층으로 구성된 인공신경망
 - 은닉층 : hidden layer. ReLU 활성화 함수 사용
 - 옵티마이저 : 신경망의 가중치, 절편을 제대로 학습하기위한 알고리즘. Adam클래스 사용
@@ -324,7 +326,40 @@ sns.set_theme(font='Malgun Gothic', rc={'axes.unicode_minus': False})
 - [노트북](./day04/mldl02_딥러닝_심층신경망.ipynb)
 
 ### 합성곱신경망
+- 합성곱신경망 : CNN(Convolution Neural Network)
+    - 필터로 도장 찍듯이 특성을 뽑아내어 사이즈를 줄여가며 훈련하는 신경망
 
+    <img src="./image/ml012.png" width="600">
+
+- 기본 용어
+    - 커널(필터) - 입력에 곱하는 가중치 도장. 뉴런의 갯수를 필터라고 부름
+    - 특성 맵 - 합성곱 계산(각 커널과 입력을 곱한 출력)으로 구해진 출력값
+
+- 각각의 가중치로 특성맵을 여러 번 생성
+
+    <img src="./image/ml013.png" width="600">
+
+- 기본 용어
+    - 패딩 - 입력이미지 테두리로 0을 채워서, 합성곱 계산 후로 입력과 동일한 사이즈의 특성맺을 만드는 방법. 0을 채우는 것을 세임 패딩, 순수 입력으로 합성곱 하는 걸 밸리드 패딩
+    - 스트라이드 - 커널 도장을 찍는 이동 크기. 보통 1로 하고 2 이상으로 하면 세임패딩을 하더라도 특성맵의 사이즈가 줄어듦
+    - 풀링 - 만들어진 특성맵의 크기를 줄이는 작업 수행. 보통 최대풀링을 많이 사용
+
+    <img src="./image/ml014.png" width="600">
+
+- 합성곱신경망 전체 구조
+
+    <img src="./image/ml015.png" width="750">
+
+- 이미지 처리시 머신러닝 로지스틱 회귀 분류로도 가능하고
+- 딥러닝 기본 신경망으로도 가능했음
+- 합성곱 신경망으로 훈련하고 예측하는 것이 좀 더 정확도 높음
+
+- [노트북](./day05/mldl01_케라스_합성곱신경망.ipynb)
+
+### 파이토치
+- 파이토치 시작하기
+
+- [노트북](./day05/mldl02_pytorch.ipynb)
 
 ## 8일차
 
