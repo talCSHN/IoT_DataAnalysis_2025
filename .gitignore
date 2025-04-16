@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 /mlvenv
 /day06/data
+/day07/data
